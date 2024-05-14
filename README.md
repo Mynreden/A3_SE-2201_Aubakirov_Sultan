@@ -9,16 +9,23 @@ Run the following command in your terminal:
 
 ```go test```
 
+### Test Results Images
+![image](https://github.com/Mynreden/A3_SE-2201_Aubakirov_Sultan/assets/110660562/31e144f9-93d3-4834-bec3-7a6075d3adc6)
+
+![image](https://github.com/Mynreden/A3_SE-2201_Aubakirov_Sultan/assets/110660562/0cf0512b-497b-4dca-a226-0cf5044862d2)
+
+
+
 ### Test Descriptions:
 
 #### Unit tests:
 
-- TestNewAccountCreationRequest - Tests creating a new user account with valid data.
-- TestNewAccountCreationRequest2 - Tests creating a new user account with invalid data (invalid email and missing password).
-- TestGettingAccountAuthenticationToken - Tests obtaining an authentication token with valid user credentials.
-- TestGettingAccountAuthenticationToken2 - Tests obtaining an authentication token with invalid user credentials (non-existent email).
-- TestActivatingAccount - Tests activating a user account with a valid activation token.
-- TestActivatingAccount2 - Tests activating a user account with an invalid activation token.
+- TestAccountCreationRequest - Tests the creation of a user account by sending a POST request with valid data and asserts the correctness of the response.
+- TestIncorrectAccountCreationRequest - Tests the creation of a user account with intentionally incorrect data to validate the error messages in the response.
+- TestLogin - Tests the user login process by sending a POST request with valid credentials and asserts the correctness of the authentication token received in the response.
+- TestIncorrectLogin - Tests the user login process with intentionally incorrect credentials to validate the error message in the response.
+- TestValidToken - Tests the activation of a user account using a valid token and asserts the correctness of the error message in the response.
+- TestInvalidToken - Tests the activation of a user account using an invalid token and asserts the correctness of the error message in the response.
 
 #### Integration tests:
 
