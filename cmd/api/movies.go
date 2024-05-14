@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN/internal/data"
-	"github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN/internal/validator"
+	"github.com/Mynreden/A3_SE-2201_Aubakirov_Sultan/internal/data"
+	"github.com/Mynreden/A3_SE-2201_Aubakirov_Sultan/internal/validator"
 )
 
 // createMovieHandler handles the "POST /v1/movies" endpoint and returns a JSON response of

@@ -8,7 +8,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN/internal/validator"
+	"github.com/Mynreden/A3_SE-2201_Aubakirov_Sultan/internal/validator"
 	"github.com/lib/pq"
 )
 

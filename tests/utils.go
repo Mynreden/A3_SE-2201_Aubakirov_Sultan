@@ -1,26 +1,34 @@
 package tests
 
 import (
+	"encoding/json"
 	"io"
 	"log"
 	"net/http"
 )
 
-func printResponseBody(resp *http.Response) {
+func readResponseBody(resp *http.Response) string {
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatalln(err)
 	}
 	sb := string(body)
-	log.Print(sb)
+	return sb
 }
 
-func printRequestBody(req *http.Request) {
-	body, err := io.ReadAll(req.Body)
+func parseResponseBody(resp *http.Response) (error, map[string]interface{}) {
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatalln(err)
 	}
 	sb := string(body)
-	log.Print(sb)
 
+	var data map[string]interface{}
+	err = json.Unmarshal([]byte(sb), &data)
+
+	if err != nil {
+		return err, nil
+	}
+
+	return nil, data
 }

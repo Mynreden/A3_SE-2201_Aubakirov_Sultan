@@ -50,7 +50,7 @@ func TestInsertingMoviesIntoDatabase(t *testing.T) {
 		}
 	}(resp.Body)
 
-	printResponseBody(resp)
+	readResponseBody(resp)
 }
 
 func TestInsertingMoviesIntoDatabaseWithWrongYear(t *testing.T) {
@@ -87,7 +87,7 @@ func TestInsertingMoviesIntoDatabaseWithWrongYear(t *testing.T) {
 		}
 	}(resp.Body)
 
-	printResponseBody(resp)
+	readResponseBody(resp)
 }
 
 func TestInsertingMoviesIntoDatabaseWithWrongRuntime(t *testing.T) {
@@ -124,7 +124,7 @@ func TestInsertingMoviesIntoDatabaseWithWrongRuntime(t *testing.T) {
 		}
 	}(resp.Body)
 
-	printResponseBody(resp)
+	readResponseBody(resp)
 }
 
 func TestMovieDeletionById(t *testing.T) {
@@ -149,5 +149,5 @@ func TestMovieDeletionById(t *testing.T) {
 		}
 	}(resp.Body)
 
-	printResponseBody(resp)
+	readResponseBody(resp)
 }

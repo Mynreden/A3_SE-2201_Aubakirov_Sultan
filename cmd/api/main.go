@@ -12,10 +12,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN/internal/data"
-	"github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN/internal/jsonlog"
-	"github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN/internal/mailer"
-	"github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN/internal/vcs"
+	"github.com/Mynreden/A3_SE-2201_Aubakirov_Sultan/internal/data"
+	"github.com/Mynreden/A3_SE-2201_Aubakirov_Sultan/internal/jsonlog"
+	"github.com/Mynreden/A3_SE-2201_Aubakirov_Sultan/internal/mailer"
+	"github.com/Mynreden/A3_SE-2201_Aubakirov_Sultan/internal/vcs"
 
 	// Import the pq driver so that it can register itself with the database/sql
 	// package. Note that we alias this import to the blank identifier, to stop the Go
@@ -81,7 +81,7 @@ func main() {
 
 	// Read the DSN Value from the db-dsn command-line flag into the config struct.
 	// We default to using our development DSN if no flag is provided.
-	flag.StringVar(&cfg.db.dsn, "db-dsn", "postgres://postgres:123456789@localhost/greenlight?sslmode=disable", "PostgreSQL DSN")
+	flag.StringVar(&cfg.db.dsn, "db-dsn", "postgres://postgres:sultan2004@localhost/greenlight?sslmode=disable", "PostgreSQL DSN")
 
 	// Read the connection pool settings from command-line flags into the config struct.
 	// Notice the default values that we're using?
