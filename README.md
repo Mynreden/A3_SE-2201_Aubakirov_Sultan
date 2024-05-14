@@ -1,27 +1,30 @@
-ASSIGNMENT ANSWERS ARE IN FILE : unit_api_test.go
-You should connect DB with your local and create all tables using migration!
+# Tests
+Test are located in package ```tests```
+They divided into unit tests and intagration tests
 
-unit test 1:
-![image](https://github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN./assets/119777671/193998d6-2865-4925-88b0-26f8dc16f068)
-unit test 2:
-![image](https://github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN./assets/119777671/a9627e70-5aca-433c-90c8-3ce194e671f7)
-unit test 3:
-![image](https://github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN./assets/119777671/5f3f7125-3514-42b0-bd1e-52cff18a02bf)
-unit test 4:
-![image](https://github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN./assets/119777671/c6c06915-c783-49c0-ab6f-e5dababa3fa3)
-unit test 5:
-![image](https://github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN./assets/119777671/84dea344-a698-4173-b8ad-a7cf24d1b4ea)
-unit test 6:
-![image](https://github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN./assets/119777671/2865d594-9621-4cd7-813e-29207db4bcb2)
+### Running Tests:
 
-integration test 1:
-![image](https://github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN./assets/119777671/b1254025-2a55-452c-ba32-16ae9a0d56d1)
+Navigate to the directory containing the test files.
+Run the following command in your terminal:
 
-integration test 2:
-![image](https://github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN./assets/119777671/88667c79-9f2e-4623-ba41-d049d3775be5)
+```go test```
 
-integration test 3:
-![image](https://github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN./assets/119777671/f2eaa4c4-3979-4f2a-aeca-15d3c0e8303b)
+### Test Descriptions:
 
-integration test 4:
-![image](https://github.com/MakyKari/A3_SE2201_AISULTAN_TABULDIN./assets/119777671/efb56e7a-182f-4a2a-abb3-0e0eafa09034)
+#### Unit tests:
+
+- TestNewAccountCreationRequest - Tests creating a new user account with valid data.
+- TestNewAccountCreationRequest2 - Tests creating a new user account with invalid data (invalid email and missing password).
+- TestGettingAccountAuthenticationToken - Tests obtaining an authentication token with valid user credentials.
+- TestGettingAccountAuthenticationToken2 - Tests obtaining an authentication token with invalid user credentials (non-existent email).
+- TestActivatingAccount - Tests activating a user account with a valid activation token.
+- TestActivatingAccount2 - Tests activating a user account with an invalid activation token.
+
+#### Integration tests:
+
+- TestInsertingMoviesIntoDatabase - Tests inserting a valid movie entry into the database.
+- TestInsertingMoviesIntoDatabaseWithWrongYear - Tests inserting a movie entry with a future year into the database (expected to fail).
+- TestInsertingMoviesIntoDatabaseWithWrongRuntime - Tests inserting a movie entry with an invalid runtime format into the database (expected to fail).
+- TestMovieDeletionById - Tests deleting a movie by its ID (assuming the ID 5 exists in your database).
+
+
